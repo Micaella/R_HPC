@@ -7,7 +7,7 @@
 library(parallel)
 
 # Inicia um cluster com 40 processos e comunicação MPI
-cl <- makeCluster(40, type = "MPI")
+cl <- makeCluster(4, type = "SOCK")
 
 # Gera 3 vetores de entrada de 50000 posições
 a <- seq(1, 50000, 1)

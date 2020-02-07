@@ -10,14 +10,14 @@ library(foreach)
 library(doParallel)
 
 # Inicia um cluster com 40 processos e comunicação MPI
-cl <- makeCluster(40, type = "MPI")
+cl <- makeCluster(40, type = "SOCK")
 
 # Registra o backend paralelo
 registerDoParallel(cl)
 
 # Gera 3 vetores de entrada de 50000 posições
 a <- seq(1, 10000, 1)
-b <- seq(10, 100000,10)
+b <- seq(10, 10000,10)
 c <- runif(10000)
 
 # Mediremos o tempo necessário para processar em paralelo

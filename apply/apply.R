@@ -8,7 +8,7 @@
 # [3,]    3    7   11   15
 # [4,]    4    8   12   16
 M <- matrix(seq(1,16), 4, 4)
-
+print(M)
 # Aplica min() às linhas
 apply(M, 1, min)
 

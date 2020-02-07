@@ -6,7 +6,7 @@
 library(parallel) 
 
 # Inicia um cluster com 4 processos e comunicação MPI
-cl <- makeCluster(4, type = "MPI")
+cl <- makeCluster(4, type = "SOCK")
 
 # Cria uma lista X com 3 elementos:
 # 
